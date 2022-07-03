@@ -4,12 +4,12 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-import{
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  // Link
-} from "react-router-dom"
+// import{
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   // Link
+// } from "react-router-dom"
 
 // let nam="khastu";
 function App() {
@@ -49,19 +49,25 @@ setAlert(null)
   }
   return (
     <>
-    <Router>
+    {/* <Router>
     <Navbar title="TextUtils"  mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container">
     <Routes>
           <Route eact path="/about" element={<About/>}/>
-          {/* </Route> */}
+          {/* </Route> }
           < Route exact path="/"
             element={<TextForm heading="Enter your text " mode={mode} showAlert={showAlert}/>}
           />
     </Routes>
         </div>
-    </Router>
+    </Router> */}
+    <Navbar title="TextUtils"  mode={mode} toggleMode={toggleMode}/>
+    <Alert alert={alert}/>
+    <div className="container">
+    {/* <About/> */}
+    <TextForm heading="Enter your text " mode={mode} showAlert={showAlert}/>
+    </div>
     </>
   );
 }
